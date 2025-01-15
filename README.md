@@ -30,7 +30,7 @@ The push_swap project is a practical exercise combining sorting algorithms, data
 
 1 - **Clone**
 ```bash
-$ https://github.com/Daviddm03/push_swap-42.git
+$ git clone https://github.com/Daviddm03/push_swap-42.git
 ```
 
 2 - **Navigate to the directory**
