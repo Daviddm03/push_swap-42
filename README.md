@@ -1,50 +1,83 @@
-# push_swap-42 🧮
-<h3>What is push_swap ⁉️</h3>
-The push_swap project at 42 is an algorithm-focused challenge centered on sorting. The goal is to implement a program that receives a sequence of integers as input and sorts them using only two stacks and a limited set of operations. This project teaches important concepts in stack manipulation, algorithm optimization, and computational efficiency.
+# push_swap
 
-<h3>Key points 🔑</h3>
+A sorting project developed in C as part of the 42 curriculum.
 
-**Data Structures**
-- Uses two stacks (a and b) to store and manipulate numbers during the sorting process.
+The goal is to sort a stack of integers using a limited set of operations while keeping the number of moves as low as possible.
 
-**Allowed Operations**
-- The program is limited to a set of specific operations:
- • **Swap:** sa, sb (swap the top elements of a or b) and ss (swap on both stacks).
- • **Rotate:** ra, rb (rotate upwards on a or b) and rr (rotate both stacks).
- • **Reverse Rotate:** rra, rrb (rotate downwards on a or b) and rrr (reverse rotate both stacks).
- • **Push:** pa (push to a) and pb (push to b).
+## About
 
-**Sorting Algorithm**
-- The project uses the Turkish algorithm, a divide-and-conquer approach that optimizes sorting by dividing the stack into smaller groups, sorting them progressively, and reintegrating the results. This strategy is highly efficient in minimizing the number of operations required.
+The program works with two stacks:
 
-**Efficiency**
-- The program's performance is evaluated based on the number of operations performed. The Turkish algorithm is designed to optimize the sorting process, ensuring fewer movements and a streamlined flow.
-
-**Input and Validation**
-- The program ensures the validity of the input, checking for integers only, no duplicates, and in-range values.
-
-<h3>Conclusion ✅</h3>
-The push_swap project is a practical exercise combining sorting algorithms, data manipulation, and computational efficiency. It allows students to develop skills in data structures, algorithm analysis, and optimization logic, utilizing a stack-based approach and implementing strategies like the Turkish algorithm.
-
-<h3>How to run</h3>
-
-1 - **Clone**
-```bash
-$ git clone https://github.com/Daviddm03/push_swap-42.git
+```text
+Stack A
+Stack B
 ```
 
-2 - **Navigate to the directory**
+Only a restricted set of operations can be used:
+
+| Operation | Description |
+| --- | --- |
+| `sa` / `sb` | Swap the first two elements |
+| `ss` | Swap both stacks |
+| `pa` / `pb` | Push an element between stacks |
+| `ra` / `rb` | Rotate a stack |
+| `rr` | Rotate both stacks |
+| `rra` / `rrb` | Reverse rotate a stack |
+| `rrr` | Reverse rotate both stacks |
+
+The project includes input validation, stack management, position and cost calculations, and separate logic for different sorting situations.
+
+## Getting Started
+
+### Requirements
+
+- GCC or Clang
+- Make
+- A Unix-like environment
+
+Clone the repository:
+
 ```bash
-$ cd push_swap-42
+git clone git@github.com:Daviddm03/push_swap-42.git
+cd push_swap-42/push_swap
 ```
 
-3 - **Compile the program**
+Compile:
+
 ```bash
-$ make
+make
 ```
 
-4 - **run, "you have to use a random amount of negative and/or positive numbers, which cannot be duplicated".**
+Run the program with a sequence of integers:
+
 ```bash
-$ ./push_swap 91 62 7 150 8 26
+./push_swap 5 2 8 1 4
 ```
 
+The program outputs the stack operations used by the sorting algorithm.
+
+For a larger example:
+
+```bash
+./push_swap 42 17 3 99 8 21 1 64 12 7
+```
+
+Clean or rebuild:
+
+```bash
+make clean
+make fclean
+make re
+```
+
+## What I Learned
+
+push_swap made me think about sorting from a different perspective.
+
+Instead of simply choosing a standard sorting algorithm, I had to work within a restricted instruction set and consider the cost of moving elements between two stacks.
+
+The project gave me more experience with linked data structures, algorithm design, input validation, and optimization.
+
+## Tech
+
+C · Algorithms · Data Structures · Makefile
